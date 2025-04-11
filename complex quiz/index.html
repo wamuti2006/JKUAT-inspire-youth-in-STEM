@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-theme">
+    <div class="quiz-container">
+        <header>
+            <h1>Mac's Programming Quiz.    Good luck :-]</h1>
+            <div class="theme-switcher">
+                <button id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="quiz-intro" id="quiz-intro">
+            <h2>Test Your Programming Knowledge</h2>
+            <p>This quiz contains 15 questions covering various programming concepts. You'll have 30 seconds per question.</p>
+            <div class="difficulty-selector">
+                <label for="difficulty">Select Difficulty:</label>
+                <select id="difficulty">
+                    <option value="all">All Levels</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <button id="start-quiz" class="btn">Start Quiz</button>
+        </div>
+
+        <div class="quiz-questions" id="quiz-questions" style="display: none;">
+            <div class="quiz-info">
+                <div class="timer">
+                    <i class="fas fa-clock"></i>
+                    <span id="time">30</span>s
+                </div>
+                <div class="score">
+                    <i class="fas fa-star"></i>
+                    <span id="score">0</span>/<span id="total-questions">15</span>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <h2 id="question-text">Question text goes here</h2>
+                <div class="options-container" id="options-container">
+                    <!-- Options will be inserted here by JavaScript -->
+                </div>
+            </div>
+
+            <div class="quiz-navigation">
+                <button id="prev-question" class="btn nav-btn" disabled>
+                    <i class="fas fa-arrow-left"></i> Previous
+                </button>
+                <button id="next-question" class="btn nav-btn">
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+                <button id="submit-quiz" class="btn submit-btn" style="display: none;">
+                    Submit Quiz
+                </button>
+            </div>
+        </div>
+
+        <div class="quiz-results" id="quiz-results" style="display: none;">
+            <h2>Quiz Results</h2>
+            <div class="result-stats">
+                <div class="stat-box">
+                    <div class="stat-value" id="correct-answers">0</div>
+                    <div class="stat-label">Correct</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="wrong-answers">0</div>
+                    <div class="stat-label">Wrong</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="percentage">0%</div>
+                    <div class="stat-label">Score</div>
+                </div>
+            </div>
+            <div class="result-details" id="result-details">
+                <!-- Result details will be inserted here -->
+            </div>
+            <button id="restart-quiz" class="btn">Take Quiz Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
